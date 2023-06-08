@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -6,119 +6,145 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-h1{
+
+
+h1 {
     text-align: center;
     padding: 20px;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-h2{
+
+h2 {
     text-align: center;
     padding: 10px;
     margin: 0 auto;
 }
-.logo img{
+
+.logo img {
     width: 150px;
     height: 150px;
 }
 
-header{
-    
+
+header {
+
     width: 100%;
     height: 160px;
     background-color: rgba(0, 0, 255, 0.39);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+
 }
-.hamburger{
+
+.hamburger {
     display: none;
 }
-.nav-bar ul{
+
+.nav-bar ul {
     display: flex;
 }
-.nav-bar ul li a{
+
+.nav-bar ul li a {
     display: block;
     color: white;
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 50px;
     transition: 0.2s;
-    margin:0 5px
+    margin: 0 5px
 }
 
-.nav-bar ul li a:hover{
+.nav-bar ul li a:hover {
     color: black;
     background-color: #fefefe;
 }
+
 /* Esta clase solo deja un boton activo todo el tiempo por ahora. */
-.nav-bar ul li a.active{
+.nav-bar ul li a.active {
     color: black;
     background-color: #fefefe;
 }
+
 /* Media query deja un espacio en los padding laterales  */
-@media  only screen and (max-width: 1320px){
-    header{
+@media only screen and (max-width: 1320px) {
+    header {
         padding: 0 50px;
     }
 }
-@media  only screen and (max-width: 1100px){
-    header{
+
+@media only screen and (max-width: 1100px) {
+    header {
         padding: 0 30px;
     }
 }
 
 /* Esta media query crea el menu hamburguesa. Fijarse que lo diseña todo para esta medida- Lo que agrega es un heigh*/
-@media  only screen and (max-width: 900px){
-    .hamburger{
+@media only screen and (max-width: 900px) {
+   
+    .hamburger {
         display: block;
         cursor: pointer;
-        
+
     }
-    .hamburger .line{
+
+    .hamburger .line {
         width: 30px;
         height: 3px;
         background-color: whitesmoke;
         margin: 6px 0;
     }
-/* El margin hay que revisarlo.  Un detalle a tener en cuenta se agrega un height para editar el contenido*/
-    .nav-bar{
+
+    /* El margin hay que revisarlo.  Un detalle a tener en cuenta se agrega un height para editar el contenido*/
+    .nav-bar {
         margin-top: 79px;
-        height:0px;
+        height: 0px;
         position: absolute;
         top: 80px;
         left: 0;
         right: 0;
-        width: 100vw;
+        width: 100%;
         background-color: black;
         transition: 0.2s;
         overflow: hidden;
+        z-index: 1;
     }
-    .nav-bar.active{
+
+    .nav-bar.active {
         height: 450px;
     }
-    .nav-bar ul{
+
+    .nav-bar ul {
         display: block;
         width: fit-content;
         margin: 80px auto 0 auto;
         text-align: center;
         transition: 0.5s;
         opacity: 0;
+        
     }
-    .nav-bar.active ul{
+
+    .nav-bar.active ul {
         opacity: 1;
     }
-    .nav-bar ul li a{
+
+    .nav-bar ul li a {
         margin-bottom: 12px;
     }
 }
 
+/* CSS PARA EL CAROUSEL DEL HEADER 
+ */
 
-.services__card{
+
+
+/* SECCION TARJETAS  */
+.services__card {
     display: flex;
     justify-content: space-around;
 }
@@ -149,6 +175,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -178,7 +205,7 @@ textarea {
 
 /* footer desing */
 
-footer{
+footer {
     margin-top: 6.5rem;
     position: relative;
     width: 100%;
@@ -191,23 +218,22 @@ footer{
     flex-direction: column;
 }
 
-footer .social_icon, footer .menu{
+footer .social_icon,
+footer .menu {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0;
-   flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 footer .social_icon li,
-footer .menu li
-{
+footer .menu li {
     list-style: none;
 }
-footer .social_icon li a
 
-{
+footer .social_icon li a {
     font-size: 2rem;
     color: white;
     margin: 0 10px;
@@ -215,13 +241,12 @@ footer .social_icon li a
     transition: 0.5s;
 }
 
-footer .social_icon li a:hover{
+footer .social_icon li a:hover {
     transform: translateY(-10px);
 }
 
 
-footer .menu li a
-{
+footer .menu li a {
     font-size: 1.2rem;
     color: white;
     margin: 0 10px;
@@ -231,11 +256,11 @@ footer .menu li a
     opacity: 0.75;
 }
 
-footer .menu li a:hover{
+footer .menu li a:hover {
     opacity: 1;
 }
 
-footer p{
+footer p {
     color: white;
     text-align: center;
     margin-top: 15px;
@@ -244,52 +269,60 @@ footer p{
 
 }
 
-footer .wave{
-position: absolute;
-top: -100px;
-left: 0;
-width: 100%;
-height: 100px;
-background: url(images/wave.png);
-background-size:1000px 100px ;
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px 100px;
 }
-footer .wave#wave1{
+
+footer .wave#wave1 {
     z-index: 1000;
     opacity: 1;
     bottom: 0;
     animation: animateWave 4s linear infinite;
 }
-footer .wave#wave2{
+
+footer .wave#wave2 {
     z-index: 999;
     opacity: 0.5;
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
 }
-footer .wave#wave3{
+
+footer .wave#wave3 {
     z-index: 1000;
     opacity: 0.2;
     bottom: 15px;
     animation: animateWave 3s linear infinite;
 }
-footer .wave#wave4{
+
+footer .wave#wave4 {
     z-index: 999;
     opacity: 0.7;
     bottom: 20px;
     animation: animateWave_02 3s linear infinite;
 }
+
 @keyframes animateWave {
-    0%{
+    0% {
         background-position-x: 1000px;
     }
-    100%{
+
+    100% {
         background-position-x: 0px;
     }
 }
+
 @keyframes animateWave_02 {
-    0%{
+    0% {
         background-position-x: 0px;
     }
-    100%{
+
+    100% {
         background-position-x: 1000px;
     }
 }

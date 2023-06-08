@@ -43,8 +43,11 @@
             </ul>
         </nav>
     </header>
-    <main class="container">
-        <h1>Haf Academy</h1>
+   
+    <main class="container" >
+     
+
+
 
         <section class="mission">
             <div>
@@ -57,7 +60,9 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, ut.</p>
             </div>
         </section>
-        <section class="services ">
+
+        <!--  seccion services -->
+        <section class="services  ">
             <div>
                 <h2 class="h2__services">Services</h2>
             </div>
@@ -132,7 +137,7 @@
                 </h2>
 
             </div>
-            <div>
+            <div class="">
                 <img src="" alt="">
                 <p>ACa va una foto + mini biografia.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eos exercitationem illum? Omnis,
@@ -144,43 +149,46 @@
             <h2>Contact</h2>
             <div class="row">
                 <div class="col  ">
-                    <div class="input-group formulario">
-                        <!-- <label for="full-name">Full Name <sup>*</sup></label>
-                        <input type="text" name="full-name" id="full-name" placeholder="Your Full Name"> -->
+                    <form action="/" method="GET" id="form">
+                        <div id="error"></div>
                         <div class="input-group formulario">
-                            <label for="full-name">Full Name <sup>*</sup></label>
-                            <input type="text" name="full-name" id="full-name" placeholder="Your Full Name">
-                        </div>
-                        <div class="input-group formulario">
-                            <label for="email">Email <sup>*</sup></label>
-                            <input type="email" name="email" id="email" placeholder="Your email adress">
-                        </div>
-                        <div class="input-group formulario">
-                            <label for="number">Phone Number <sup>*</sup></label>
-                            <input type="number" name="number" id="number" placeholder="Your phone number">
-                        </div>
-                        <div class="input-group formulario">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" placeholder="Wrire your message here ..."></textarea>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="input-group submit-btn-wrap formulario">
-                                <button class="theme-btn" name="submit" type="submit" id="submitForm">Send
-                                    message</button>
+
+                            <div class="input-group formulario">
+                                <label for="name">Full Name <sup>*</sup></label>
+                                <input type="text" name="name" id="name" placeholder="Your Full Name">
+                            </div>
+                            <div class="input-group formulario">
+                                <label for="email">Email <sup>*</sup></label>
+                                <input type="email" name="email" id="email" placeholder="Your email adress">
+                            </div>
+                            <div class="input-group formulario">
+                                <label for="number">Phone Number <sup>*</sup></label>
+                                <input type="number" name="number" id="number" placeholder="Your phone number">
+                            </div>
+                            <div class="input-group formulario">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message"
+                                    placeholder="Wrire your message here ..."></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group submit-btn-wrap formulario">
+                                    <button class="theme-btn" name="submit" type="submit" id="submitForm">Send
+                                        message</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
 
     </main>
-    <footer class="">
+    <footer class="container-fluid">
         <div class="waves">
             <div class="wave" id="wave1"></div>
-            <div class="wave"  id="wave2"></div>
-            <div class="wave"  id="wave3"></div>
-            <div class="wave"  id="wave4"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
         <ul class="social_icon">
             <li> <a href=""><i class="bi bi-linkedin"></i></a></li>
