@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+
+header{
+    
+    width: 100%;
+    height: 160px;
+    background-color: rgba(0, 0, 255, 0.39);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.hamburger{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin:0 5px
+}
+
+.nav-bar ul li a:hover{
+    color: black;
+    background-color: #fefefe;
+}
+/* Esta clase solo deja un boton activo todo el tiempo por ahora. */
+.nav-bar ul li a.active{
+    color: black;
+    background-color: #fefefe;
+}
+/* Media query deja un espacio en los padding laterales  */
+@media  only screen and (max-width: 1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media  only screen and (max-width: 1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+
+/* Esta media query crea el menu hamburguesa. Fijarse que lo diseña todo para esta medida- Lo que agrega es un heigh*/
+@media  only screen and (max-width: 900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background-color: whitesmoke;
+        margin: 6px 0;
+    }
+/* El margin hay que revisarlo.  Un detalle a tener en cuenta se agrega un height para editar el contenido*/
+    .nav-bar{
+        margin-top: 79px;
+        height:0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: black;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+
+.services__card{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ########### Formulario ###########*/
+
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #5f88bd4c;
+    border: 1px solid #cccccc00;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: rgb(9, 8, 8);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0d0d0d00;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn-wrap {
+    text-align: center;
+}
+
+.theme-btn {
+    background-color: #060707;
+    color: rgb(253, 253, 253);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.theme-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* footer desing */
+
+footer{
+    margin-top: 6.5rem;
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.592);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon, footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+   flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li
+{
+    list-style: none;
+}
+footer .social_icon li a
+
+{
+    font-size: 2rem;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover{
+    transform: translateY(-10px);
+}
+
+
+footer .menu li a
+{
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover{
+    opacity: 1;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+
+}
+
+footer .wave{
+position: absolute;
+top: -100px;
+left: 0;
+width: 100%;
+height: 100px;
+background: url(images/wave.png);
+background-size:1000px 100px ;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave {
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_02 {
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
