@@ -11,7 +11,9 @@ a {
     text-decoration: none;
 }
 
-
+body {
+    overflow-x: hidden;
+}
 
 h1 {
     text-align: center;
@@ -142,86 +144,9 @@ header {
 /* CSS PARA EL CAROUSEL DEL HEADER 
 
  */
-.image-slider {
-    min-height: 30em;
-    height: 80vh;
-    position: relative;
-    background-image: url(images/carrousel1.jpg);
-    background-image: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 0.3s;
-}
 
-.image-slider * {
-    box-sizing: border-box;
-}
 
-.caption {
-    background: linear-gradient(rgba(0, 0, 0, 0)) #000;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 4em 1em 2em 1em;
-    text-align: center;
-}
 
-.caption h2 {
-    font-size: 3rem;
-    margin: 0;
-    color: rgb(3, 3, 3);
-}
-
-.caption p {
-    font-size: 2rem;
-    margin: 0;
-    color: rgb(8, 8, 8);
-}
-
-.arrow-left,
-.arrow-right {
-    background: rgb(241, 239, 239);
-    position: absolute;
-    top: 40%;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.arrow-left:hover,
-.arrow-right:hover {
-    background: #000;
-    color: #fff;
-}
-
-.arrow-left {
-    left: 1em;
-}
-
-.arrow-right {
-    right: 1em;
-}
-
-/* clase para javascript al toggle */
-.image-fade {
-    animation: imgFade 0.5s ease-in-out;
-}
-
-@keyframes imgFade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /* SECCION TARJETAS  */
 .services__card {
@@ -229,85 +154,96 @@ header {
     justify-content: space-around;
 }
 
-@media (max-width: 990px) {
-    .image-slider {
-        height: 300px;
-    }
-
-    .arrow-left,
-    .arrow-right {
-        width: 40px;
-        height: 40px;
-    }
-
-    .arrow-left i,
-    .arrow-right i {
-        font-size: 20px;
-    }
-
-    .caption {
-        bottom: 10px;
-        left: 10px;
-    }
-
-    .caption h1 {
-        font-size: 20px;
-    }
-
-    .caption p {
-        font-size: 14px;
-    }
+/* 
+tarjetas popup */
+.classOnline {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+
 /* ########### mission ################### */
-.mission{
+.mission {
     background-color: wheat;
     margin-bottom: 5rem;
 }
 
-.title__mission
-
-{
+.title__mission {
     padding-top: 2rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
-.title__mission--p{
+
+.title__mission--p {
     font-size: 1.5rem;
-   
+
 }
-.svg{
+
+.svg {
     margin-top: 5rem;
     display: flex;
     justify-content: space-evenly;
-    }
+}
+
 /* ########### CARDS ################### */
 
-.services{
+.services {
     background-color: rgba(255, 0, 0, 0.461);
 }
-.h2__services{
+
+.h2__services {
     padding-top: 3rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 2rem;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.show-popup {
+    display: block !important;
+}
+
+
+
 /* ########### about ###########*/
-.about{
+.about {
     margin-top: 3rem;
     padding: 78px 0px;
     width: 100%;
 }
-.about img{
+
+.about img {
     height: auto;
     width: 420px;
 }
 
-.about-text{
+.about-text {
     width: 550px;
 }
 
-.main{
+.main {
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
@@ -316,27 +252,29 @@ header {
     justify-content: space-around;
 }
 
-.about-text h2{
+.about-text h2 {
     color: black;
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
-.about-text h5{
+
+.about-text h5 {
     color: black;
     font-size: 25px;
     text-transform: capitalize;
     margin-bottom: 25px;
     letter-spacing: 2px;
 }
-.about-text p{
+
+.about-text p {
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 15px;
     margin-bottom: 45px;
 }
 
-button{
+button {
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
@@ -344,11 +282,13 @@ button{
     border-radius: 30px;
     transition: .4s;
 }
-button:hover{
+
+button:hover {
     background: transparent;
     border: 2px solid;
     cursor: pointer;
 }
+
 /* ########### Formulario ###########*/
 
 

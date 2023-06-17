@@ -8,61 +8,35 @@ hamburger.onclick = function () {
 
 
 // DOM
-const slider = document.querySelector(".image-slider");
-const arrLeft = document.querySelector(".arrow-left");
-const arrRight = document.querySelector(".arrow-right");
-const heading = document.querySelector(".caption h2");
-const description = document.querySelector(".caption p");
+let buttonClasses = document.getElementById("classes");
+let contentContainer = document.getElementById("contentContainer");
 
-//Data for the slider 
-
-const images = ["carrousel1.jpg", "carrousel2.jpg", "carrousel3.jpg"]
-
-const headings = ["Clases online", "Profesores de alto rendimiento", "Apuntes"]
-const descriptions = [
-    "Matematica Fisica Quimica",
-    "Profesores academicos",
-    "Apuntes gratis y tutorias",];
-
-//slider ID
-let id = 0;
-//the slider function
-function slide(id) {
-    //setear the background image
-    slider.style.backgroundImage = `url(images/${images[id]})`;
-    //add image fade animation
-    slider.classList.add("image-fade");
-
-    setTimeout(() => {
-        slider.classList.remove("image-fade");
-    }, 1);
-    //change heading
-    heading.innerText = headings[id];
-    //change description
-    description.innerText = descriptions[id];
-}
-
-
-//add a click event to left arrow
-
-arrLeft.addEventListener("click", () => {
-    id--;
-    if (id < 0) {
-        id.images.length - 1;
+buttonClasses.onclick = function () {
+    if (contentContainer.innerHTML !== "") {
+        contentContainer.innerHTML = ""; // Cerrar la tarjeta si ya está abierta
+        return; // Salir de la función
     }
-    //run the slide function
-    slide(id);
-});
-//add click event to right arrow
+    const cardElement = document.createElement("div");
+  cardElement.classList.add("card", "classOnline", "zoom-in");
+  
+    contentContainer.innerHTML = `
+    <div class="card classOnline" style="width: 20rem;" id="myCard">
+      <img src="images/profesor.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Online Class</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis debitis quae veritatis magni.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Fisica</li>
+        <li class="list-group-item">Analisis Matematico</li>
+        <li class="list-group-item">Quimica</li>
+      </ul>
+      <button id="closeFiles"><i class="bi bi-x-lg"></i></button>
+    </div>
+  `;
 
-arrRight.addEventListener("click", () => {
-    id++;
-
-    if (id > images.lenght - 1) {
-        id = 0;
-    }
-    slide(id);
-});
-
-
-
+    let buttonClose = document.getElementById("closeFiles");
+    buttonClose.onclick = function () {
+        contentContainer.innerHTML = ""; // Cerrar la tarjeta al hacer clic en el botón de cierre
+    };
+};
