@@ -157,14 +157,24 @@ header {
 /* 
 tarjetas popup */
 .classOnline {
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
-    position: fixed;
+    position: absolute;
     z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0%;
+    animation-name: popUpAnimation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
 }
+
+@keyframes popUpAnimation {
+    0% {
+        transform: scale(0.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 
 /* ########### mission ################### */
