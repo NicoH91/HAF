@@ -13,6 +13,7 @@ a {
 
 body {
     overflow-x: hidden;
+   background: linear-gradient(to right top, rgb(255, 255, 255), rgba(14, 164, 233, 0.901), rgb(14, 165, 233));
 }
 
 h1 {
@@ -31,6 +32,20 @@ h2 {
 .logo img {
     width: 150px;
     height: 150px;
+}
+button {
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+    background: transparent;
+    border: 2px solid;
+    cursor: pointer;
 }
 
 
@@ -238,10 +253,11 @@ tarjetas popup */
 
 
 /* ########### about ###########*/
-.about {
+.title__h2 {
     margin-top: 3rem;
     padding: 78px 0px;
     width: 100%;
+    font-size: 3rem;
 }
 
 .about img {
@@ -283,20 +299,16 @@ tarjetas popup */
     font-size: 15px;
     margin-bottom: 45px;
 }
-
-button {
+.about-btn{
+    font-size: 1.5rem;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
     padding: 13px 30px;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: .4s;
-}
+    background-color: lightskyblue;
 
-button:hover {
-    background: transparent;
-    border: 2px solid;
-    cursor: pointer;
 }
 
 /* ########### Formulario ###########*/
