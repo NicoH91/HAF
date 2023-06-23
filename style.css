@@ -13,7 +13,7 @@ a {
 
 body {
     overflow-x: hidden;
-   background: linear-gradient(to right top, rgb(255, 255, 255), rgba(14, 164, 233, 0.901), rgb(14, 165, 233));
+    background: white;
 }
 
 h1 {
@@ -30,9 +30,11 @@ h2 {
 }
 
 .logo img {
-    width: 150px;
-    height: 150px;
+    margin-left: 8rem;
+    width: 5%;
+    height: 5%;
 }
+
 button {
     text-decoration: none;
     border: 2px solid transparent;
@@ -52,8 +54,8 @@ button:hover {
 header {
 
     width: 100%;
-    height: 160px;
-    background-color: rgba(0, 0, 255, 0.585);
+    height: 100px;
+    background-color: rgba(246, 242, 242, 0.979);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -70,17 +72,18 @@ header {
 
 .nav-bar ul li a {
     display: block;
-    color: white;
+    color: rgb(6, 6, 6);
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 50px;
     transition: 0.2s;
-    margin: 0 5px
+    margin: 0 5px;
+
 }
 
 .nav-bar ul li a:hover {
-    color: black;
-    background-color: #fefefe;
+    color: whitesmoke;
+    background-color: #2863e3e2;
 }
 
 /* Esta clase solo deja un boton activo todo el tiempo por ahora. */
@@ -114,7 +117,7 @@ header {
     .hamburger .line {
         width: 30px;
         height: 3px;
-        background-color: whitesmoke;
+        background-color: rgb(12, 11, 11);
         margin: 6px 0;
     }
 
@@ -127,7 +130,7 @@ header {
         left: 0;
         right: 0;
         width: 100%;
-        background-color: black;
+        background-color: rgb(243, 237, 237);
         transition: 0.2s;
         overflow: hidden;
         z-index: 1;
@@ -156,9 +159,113 @@ header {
     }
 }
 
-/* CSS PARA EL CAROUSEL DEL HEADER 
+/* CSSS PARA EL CARROUSEL */
+.carousel.container-fluid {
+    padding-bottom: 5rem;
+    max-width: 80rem;
+    /* Ajusta el valor según tus necesidades */
+}
+
+.title__h5 {
+    font-size: 2rem;
+    color: black;
+}
+
+.title__h5--p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* CSS PARA la mision 
 
  */
+
+.mission__btn {
+    padding-top: 3rem;
+
+}
+
+
+
+.informacion {
+    
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.informacion:hover{
+    background-color: black;
+    color: white;
+}
+
+/* ########### mission ################### */
+.mission {
+    color: black;
+    font-weight: 500;
+    background-image: url(./images/haflogo-40.png );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 5rem;
+
+}
+
+.title__h2--mision {
+    font-size: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-weight: bolder;
+}
+
+.title__mission {
+    padding-top: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.title__mission--p {
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    line-height: 2.5rem;
+    font-weight: 700;
+
+}
+
+.title__h2--btn {
+    font-size: 2rem;
+    width: 50%;
+    line-height: 3rem;
+}
+
+.svg {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+
+}
+
+.svg img {
+    animation: spin-fade 8s linear infinite;
+}
+
+@keyframes spin-fade {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
 
 
 
@@ -180,6 +287,31 @@ tarjetas popup */
     animation-timing-function: ease-in-out;
 }
 
+
+.close {
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px;
+    color: blue;
+}
+
+.card-h5 {
+    color: blue;
+    font-size: 18px;
+    /* Agrega otros estilos comunes aquí */
+}
+.card-text{
+    color: black;
+    font-size: 1.2rem;
+}
+.card-color{
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+
 @keyframes popUpAnimation {
     0% {
         transform: scale(0.2);
@@ -192,34 +324,10 @@ tarjetas popup */
 
 
 
-/* ########### mission ################### */
-.mission {
-    background-color: wheat;
-    margin-bottom: 5rem;
-}
-
-.title__mission {
-    padding-top: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.title__mission--p {
-    font-size: 1.5rem;
-
-}
-
-.svg {
-    margin-top: 5rem;
-    display: flex;
-    justify-content: space-evenly;
-}
 
 /* ########### CARDS ################### */
 
-.services {
-    background-color: rgba(255, 0, 0, 0.461);
-}
+
 
 .h2__services {
     padding-top: 3rem;
@@ -299,7 +407,8 @@ tarjetas popup */
     font-size: 15px;
     margin-bottom: 45px;
 }
-.about-btn{
+
+.about-btn {
     font-size: 1.5rem;
     text-decoration: none;
     border: 2px solid transparent;
@@ -312,17 +421,107 @@ tarjetas popup */
 }
 
 /* ########### Formulario ###########*/
+/* lineas ? */
+
+.lineas{
+    position: relative;
+    /* background: #131b33; */
+    background:rgba(8, 8, 8, 0.968) ;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 22px;
+    
+    /* width: 300px;
+    height: 400px; */
+    overflow: hidden;
+}
 
 
+.lineas span:nth-child(1){
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background: linear-gradient(to right, transparent,#17f3fd
+);
+animation: animate-1 2s linear infinite;
+}
+@keyframes animate-1{
+0%{
+    transform: translateX(-100%);
+}
+100%{
+    transform: translateX(100%);
+}
+}
+
+
+.lineas span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent,#17f3fd);
+    animation-delay: 1s;
+    animation: animate-2 2s linear infinite;
+    }
+    @keyframes animate-2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+    }
+
+    .lineas span:nth-child(3){
+        position: absolute;
+        bottom:0;
+        right:0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to left, transparent,#17f3fd);
+        animation: animate-3 2s linear infinite;
+        
+        }
+        @keyframes animate-3{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+        }
+
+        .lineas span:nth-child(4){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to left, transparent,#17f3fd);
+            animation-delay: 1s;
+            animation: animate-4 2s linear infinite;
+            }
+            @keyframes animate-4{
+            0%{
+                transform: translateY(100%);
+            }
+            100%{
+                transform: translateY(-100%);
+            }
+            }
 .formulario {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #5f88bd4c;
+    background-color: #f9f9fa4c;
     border: 1px solid #cccccc00;
     border-radius: 5px;
     font-family: Arial, sans-serif;
-    color: rgb(9, 8, 8);
+    color: rgba(247, 246, 246, 0.742);
 }
 
 .input-group {
