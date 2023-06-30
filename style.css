@@ -188,12 +188,13 @@ header {
 
 
 .informacion {
-    
+
     border-radius: 20px;
     padding: 10px;
     text-transform: uppercase;
 }
-.informacion:hover{
+
+.informacion:hover {
     background-color: black;
     color: white;
 }
@@ -282,7 +283,7 @@ tarjetas popup */
     position: absolute;
     z-index: 3;
     top: 0%;
-    animation-name: popUpAnimation;
+    animation-name: slide-in;
     animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
 }
@@ -302,11 +303,13 @@ tarjetas popup */
     font-size: 18px;
     /* Agrega otros estilos comunes aquí */
 }
-.card-text{
+
+.card-text {
     color: black;
     font-size: 1.2rem;
 }
-.card-color{
+
+.card-color {
     background-color: lightblue;
     border-radius: 10px;
 }
@@ -321,7 +324,22 @@ tarjetas popup */
         transform: scale(1);
     }
 }
+/* .box {
+    animation: slide-in 1000ms;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+  } */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0.25;
+    }
 
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
 
 
 
@@ -368,9 +386,18 @@ tarjetas popup */
     font-size: 3rem;
 }
 
+.about {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    background-color: lightblue;
+}
+
 .about img {
     height: auto;
     width: 420px;
+
 }
 
 .about-text {
@@ -384,11 +411,12 @@ tarjetas popup */
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .about-text h2 {
     color: black;
-    font-size: 80px;
+    font-size: 1.5rem;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
@@ -420,99 +448,180 @@ tarjetas popup */
 
 }
 
+.review {
+    background: rgb(63, 200, 246);
+    height: auto;
+    width: 300px;
+    border-radius: 15px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px #0d0d0d;
+    align-items: center;
+    align-content: center;
+}
+
+.review__items {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 250px;
+    padding: 10px;
+    align-items: center;
+}
+
+/* .review__items img {
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 15px;
+} */
+
+.review__items h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+.review__items p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+}
+
+.review__button {
+    text-align: center;
+    padding: 10px;
+}
+
+.review__button button {
+    color: lightblue;
+    background: rgb(14, 14, 14);
+    font-weight: bold;
+}
+
+.review__items {
+    /* display: none; */
+    opacity: 0;
+    animation-name: listado;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.review__items.active {
+    opacity: 1;
+}
+
+@keyframes listado {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 /* ########### Formulario ###########*/
 /* lineas ? */
 
-.lineas{
+.lineas {
     position: relative;
     /* background: #131b33; */
-    background:rgba(8, 8, 8, 0.968) ;
+    background: rgba(8, 8, 8, 0.968);
     max-width: 50rem;
     margin: 0 auto;
     padding: 22px;
-    
+
     /* width: 300px;
     height: 400px; */
     overflow: hidden;
 }
 
 
-.lineas span:nth-child(1){
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 3px;
-background: linear-gradient(to right, transparent,#17f3fd
-);
-animation: animate-1 2s linear infinite;
+.lineas span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #17f3fd);
+    animation: animate-1 2s linear infinite;
 }
-@keyframes animate-1{
-0%{
-    transform: translateX(-100%);
-}
-100%{
-    transform: translateX(100%);
-}
+
+@keyframes animate-1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 
-.lineas span:nth-child(2){
+.lineas span:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, transparent,#17f3fd);
+    background: linear-gradient(to bottom, transparent, #17f3fd);
     animation-delay: 1s;
     animation: animate-2 2s linear infinite;
-    }
-    @keyframes animate-2{
-    0%{
+}
+
+@keyframes animate-2 {
+    0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         transform: translateY(100%);
     }
+}
+
+.lineas span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #17f3fd);
+    animation: animate-3 2s linear infinite;
+
+}
+
+@keyframes animate-3 {
+    0% {
+        transform: translateX(100%);
     }
 
-    .lineas span:nth-child(3){
-        position: absolute;
-        bottom:0;
-        right:0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(to left, transparent,#17f3fd);
-        animation: animate-3 2s linear infinite;
-        
-        }
-        @keyframes animate-3{
-        0%{
-            transform: translateX(100%);
-        }
-        100%{
-            transform: translateX(-100%);
-        }
-        }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
-        .lineas span:nth-child(4){
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(to left, transparent,#17f3fd);
-            animation-delay: 1s;
-            animation: animate-4 2s linear infinite;
-            }
-            @keyframes animate-4{
-            0%{
-                transform: translateY(100%);
-            }
-            100%{
-                transform: translateY(-100%);
-            }
-            }
+.lineas span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to left, transparent, #17f3fd);
+    animation-delay: 1s;
+    animation: animate-4 2s linear infinite;
+}
+
+@keyframes animate-4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
 .formulario {
     max-width: 500px;
     margin: 0 auto;

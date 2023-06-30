@@ -15,17 +15,41 @@ let contentContainer = document.getElementById("contentContainer");
 let contentContainerApuntes = document.getElementById("contentContainerApuntes")
 let buttonApuntes = document.getElementById("apuntes")
 
+
+
 let buttonTutoria = document.getElementById("tutoria")
 let contentContainerTutoria = document.getElementById("contentContainerTutoria")
 
 // Obtén todos los elementos h5 con la clase "card-title"
-var cardTitles = document.querySelectorAll('.card-title');
+let cardTitles = document.querySelectorAll('.card-title');
+
+let btnOpenModal = document.getElementById("btnOpenModal");
+  btnOpenModal.addEventListener("click", openModal);
+
+  let btnCloseModal = document.getElementById("btnCloseModal");
+  btnCloseModal.addEventListener("click", closeModal);
+
+  function openModal() {
+    let modal = document.querySelector(".modalLogin");
+    modal.style.display = "block";
+  }
+
+  function closeModal() {
+    let modal = document.querySelector(".modalLogin");
+    modal.style.display = "none";
+  }
+// When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
 
 // Agrega una clase común a todos los elementos h5
 cardTitles.forEach(function (title) {
   title.classList.add('card-h5');
 });
-//DOM PARA SVGS
+
 
 
 
@@ -119,3 +143,5 @@ buttonClasses.onclick = function () {
     contentContainer.innerHTML = ""; // Cerrar la tarjeta al hacer clic en el botón de cierre
   };
 };
+
+
