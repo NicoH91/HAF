@@ -24,20 +24,20 @@ let contentContainerTutoria = document.getElementById("contentContainerTutoria")
 let cardTitles = document.querySelectorAll('.card-title');
 
 let btnOpenModal = document.getElementById("btnOpenModal");
-  btnOpenModal.addEventListener("click", openModal);
+btnOpenModal.addEventListener("click", openModal);
 
-  let btnCloseModal = document.getElementById("btnCloseModal");
-  btnCloseModal.addEventListener("click", closeModal);
+let btnCloseModal = document.getElementById("btnCloseModal");
+btnCloseModal.addEventListener("click", closeModal);
 
-  function openModal() {
-    let modal = document.querySelector(".modalLogin");
-    modal.style.display = "block";
-  }
+function openModal() {
+  let modal = document.querySelector(".modalLogin");
+  modal.style.display = "block";
+}
 
-  function closeModal() {
-    let modal = document.querySelector(".modalLogin");
-    modal.style.display = "none";
-  }
+function closeModal() {
+  let modal = document.querySelector(".modalLogin");
+  modal.style.display = "none";
+}
 // When the user clicks anywhere outside of the modal, close it
 // window.onclick = function (event) {
 //   if (event.target == modal) {
@@ -99,7 +99,7 @@ buttonApuntes.onclick = function () {
   
   <div class="card-body">
     <h5 class="card-title card-h5">Tutoria</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis debitis quae veritatis magni
+    <p class="card-text">Nuestra tutoría te capacita para rendir exámenes con confianza. Te acompañamos en tu proceso de aprendizaje, brindándote apoyo y orientación personalizada. ¡Alcanza tu máximo potencial académico con nosotros!
     .</p>
   </div>
  
@@ -124,8 +124,8 @@ buttonClasses.onclick = function () {
     <div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
      
       <div class="card-body">
-        <h5 class="card-title card-h5">Online Class</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis debitis quae veritatis magni.</p>
+        <h5 class="card-title card-h5">Clases Online</h5>
+        <p class="card-text">Sumérgete en nuestra modalidad online y disfruta de clases de matemática, física, química y más. Amplía tus conocimientos desde cualquier lugar, con instructores expertos</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Fisica</li>

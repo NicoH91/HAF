@@ -14,14 +14,15 @@ a {
 body {
     overflow-x: hidden;
     background: white;
+
 }
 
-h1 {
+/* h1 {
     text-align: center;
     padding: 20px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
+} */
 
 h2 {
     text-align: center;
@@ -133,7 +134,7 @@ header {
         background-color: rgb(243, 237, 237);
         transition: 0.2s;
         overflow: hidden;
-        z-index: 1;
+        z-index: 999;
     }
 
     .nav-bar.active {
@@ -159,22 +160,211 @@ header {
     }
 }
 
-/* CSSS PARA EL CARROUSEL */
-.carousel.container-fluid {
-    padding-bottom: 5rem;
-    max-width: 80rem;
-    /* Ajusta el valor según tus necesidades */
+/* CSSS PARA EL login modal  */
+@media only screen and (max-width: 900px){
+    .modalLogin {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.title__h5 {
-    font-size: 2rem;
-    color: black;
+/* Set a style for all buttons */
+
+
+button:hover {
+    opacity: 0.8;
 }
 
-.title__h5--p {
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 25%;
+    /* border-radius: 50%; */
+}
+
+.containerModal {
+    padding: 16px;
+}
+
+.containerModal h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modalLogin {
+    display: none;
+    /* Hidden by default */
+
+    /* Stay in place */
+    z-index: 8;
+    /* Sit on top */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    /* overflow: auto; */
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.837);
+
+    /* Black w/ opacity */
+    /* padding-top: 30px; */
+
+}
+
+/* Modal Content/Box */
+.modalContent {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.closeModal {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
     font-weight: bold;
-    font-size: 1.5rem;
+    cursor: pointer;
 }
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* Fin  login modal  */
+/* CSSS PARA EL hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background-size: cover;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.65) 100%), url(qijin-xu.png) no-repeat center center scroll;
+}
+
+.title-h1 {
+    font-style: normal;
+    font-weight: bold;
+    color: #eee;
+    font-size: 11vmin;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 35px;
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 5rem;
+}
+
+.title-h1 p {
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    font-size: 3rem;
+    padding: 5rem;
+}
+
+.title-h1 .btn-hero {
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+video {
+    z-index: -1;
+    opacity: 0.75;
+}
+
 
 /* CSS PARA la mision 
 
@@ -324,6 +514,7 @@ tarjetas popup */
         transform: scale(1);
     }
 }
+
 /* .box {
     animation: slide-in 1000ms;
     animation-delay: 500ms;

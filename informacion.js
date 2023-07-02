@@ -59,5 +59,35 @@ function carousel(review) {
 let botonLogin = document.getElementById("btn-login")
 
 let usuario = document.getElementsByName('usuario')[0].value;
-let contraseña = document.getElementsByName('psw')[0].value
+let contrasenia = document.getElementsByName('psw')[0].value
+var cancelBtn = document.getElementById("cancel");
 
+
+
+cancelBtn.addEventListener("click", function () {
+    let modal = document.querySelector(".modalLogin");
+    modal.style.display = "none";
+});
+
+botonLogin.addEventListener("click", function (e) {
+    e.preventDefault(); // No se envía el formulario
+
+    let usuario = document.getElementsByName('usuario')[0].value;
+    let contrasenia = document.getElementsByName('psw')[0].value;
+
+    let datos = {
+        usuario: usuario,
+        contrasenia: contrasenia
+    };
+
+    let datosJSON = JSON.stringify(datos);
+    localStorage.setItem("datos", datosJSON);
+
+    if (usuario === "coder" && contrasenia === "coderjs") {
+        // Los datos coinciden, mas adelante crear un menu o algo especifico a cada profesor.
+        window.open("https://www.coderhouse.com/", "_blank");
+    } else {
+        // Los datos no coinciden, mostrar un mensaje de error 
+        alert("Usuario o contraseña incorrectos");
+    }
+});
