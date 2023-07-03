@@ -88,6 +88,6 @@ botonLogin.addEventListener("click", function (e) {
         window.open("https://www.coderhouse.com/", "_blank");
     } else {
         // Los datos no coinciden, mostrar un mensaje de error 
-        alert("Usuario o contraseña incorrectos");
+        alert("Usuario o contraseña incorrectos. Usuario coder pw coderjs para acceder");
     }
 });

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/HAF LOGO.png" alt="">
+        </div>
+        <di class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </di>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="../index.html" class="">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="../index.html"> Mision</a>
+                </li>
+                <li>
+                    <a href="../index.html">Servicio</a>
+                </li>
+                <li>
+                    <a href="../index.html">Acerca</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+                <li>
+                    <button id="btnOpenModal" class="informacion">Login</button>
+                </li>
+            </ul>
+            <div class="modalLogin">
+                <form class="modalContent animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <span id="btnCloseModal" class="closeModal" title="Close Modal">&times;</span>
+                        <img src="../images/HAF LOGO.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="containerModal">
+
+                        <label for="usuario"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="usuario" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit" id="btn-login">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="containerModal">
+                        <button type="button" class="informacion btn btn-danger" id="cancel">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+
+        </nav>
+
+    </header>
+    <section class="container container-form">
+        <h2 class="title__h2" id="contact">Contacto</h2>
+        <div class="row">
+            <div class="col  ">
+
+                <form action="/" method="GET" id="form">
+                    <div id="error"></div>
+
+                    <div class="input-group formulario">
+                        <div class="lineas">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                            <div class="input-group formulario">
+                                <label for="name">Full Name <sup>*</sup></label>
+                                <input type="text" name="name" id="name" placeholder="Your Full Name">
+                            </div>
+                            <div class="input-group formulario">
+                                <label for="email">Email <sup>*</sup></label>
+                                <input type="email" name="email" id="email" placeholder="Your email adress">
+                            </div>
+                            <div class="input-group formulario">
+                                <label for="number">Phone Number <sup>*</sup></label>
+                                <input type="number" name="number" id="number" placeholder="Your phone number">
+                            </div>
+                            <div class="input-group formulario">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message"
+                                    placeholder="Wrire your message here ..."></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group submit-btn-wrap formulario">
+                                    <button class="theme-btn" name="submit" type="submit" id="submitForm">Send
+                                        message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+            <li> <a href=""><i class="bi bi-linkedin"></i></a></li>
+            <li><a href=""><i class="bi bi-instagram"></i></a></li>
+            <li><a href=""><i class="bi bi-whatsapp"></i></i></a></li>
+            <li><a href=""><i class="bi bi-twitter"></i></a></li>
+            <!-- <li><a href=""><i class="bi bi-twitter"></i></a></li>
+            <li><a href=""><i class="bi bi-twitter"></i></a></li> -->
+        </ul>
+        <ul class="menu">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Mision</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href="">Acerca</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+        <p>2023 All rights Reserved HAF Academy</p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="informacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

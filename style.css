@@ -254,10 +254,7 @@ span.psw {
     width: 80%;
     /* Could be more or less, depending on screen size */
 }
-.gif{
-   height: 123px;
-   width: 123px;
-}
+
 
 /* The Close Button (x) */
 .closeModal {
@@ -414,17 +411,20 @@ video {
     font-weight: bolder;
 }
 
-.title__mission {
+/* .title__mission {
     padding-top: 2rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
-}
+} */
 
 .title__mission--p {
     font-size: 1.5rem;
-    word-spacing: 2px;
+    word-spacing: 5px;
     line-height: 2.5rem;
     font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
 
 }
 
@@ -433,6 +433,8 @@ video {
     width: 50%;
     line-height: 3rem;
     padding-bottom: 4rem;
+    margin-bottom: 2rem ;
+    line-height: 10px;
 }
 
 .svg {
@@ -442,6 +444,12 @@ video {
     cursor: pointer;
 
 }
+.gif{
+    height: 123px;
+    width: 123px;
+    
+ }
+ 
 
 /* .svg img {
     animation: spin-fade 8s linear infinite;
@@ -581,7 +589,14 @@ tarjetas popup */
     padding: 78px 0px;
     width: 100%;
     font-size: 3rem;
+    display: flex;
+    justify-content: start;
+    font-style: italic;
+    text-decoration: underline rgb(80, 203, 255);
+   
+    
 }
+
 
 .about {
     display: flex;
@@ -870,6 +885,11 @@ textarea {
     color: white;
 }
 
+
+.seccion{
+    margin-top: 5rem;
+    padding: 4rem;
+}
 /* footer desing */
 
 footer {
