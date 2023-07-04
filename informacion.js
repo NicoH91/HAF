@@ -28,16 +28,15 @@ function nextReview() {
     carousel(rev);
 }
 
+
 function carousel(review) {
     let reviews = document.getElementsByClassName("review__items");
     review = review >= reviews.length ? 0 : review;
     rev = review >= reviews.length ? 0 : rev;
 
+    review = review < 0 ? reviews.length - 1 : review;
+    rev = review < 0 ? reviews.length - 1 : rev;
 
-    if (review < 0) {
-        review = reviews.length - 1;
-        rev = reviews.length - 1;
-    }
     for (let i = 0; i < reviews.length; i++) {
         reviews[i].style.display = "none";
     }
@@ -46,7 +45,6 @@ function carousel(review) {
     for (let i = 0; i < reviews.length; i++) {
         reviews[i].classList.remove("active");
     }
-
     reviews[review].classList.add("active");
 }
 
@@ -83,11 +81,9 @@ botonLogin.addEventListener("click", function (e) {
     let datosJSON = JSON.stringify(datos);
     localStorage.setItem("datos", datosJSON);
 
-    if (usuario === "coder" && contrasenia === "coderjs") {
-        // Los datos coinciden, mas adelante crear un menu o algo especifico a cada profesor.
-        window.open("https://www.coderhouse.com/", "_blank");
-    } else {
-        // Los datos no coinciden, mostrar un mensaje de error 
-        alert("Usuario o contraseña incorrectos. Usuario coder pw coderjs para acceder");
-    }
+
+    usuario === "coder" && contrasenia === "coderjs"
+        ? window.open("https://www.coderhouse.com/", "_blank")
+        : alert("Usuario o contraseña incorrectos. Usuario coder pw coderjs para acceder");
+
 });
