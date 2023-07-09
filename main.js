@@ -1,3 +1,5 @@
+
+
 hamburger = document.querySelector(".hamburger");
 hamburger.onclick = function () {
   navBar = document.querySelector(".nav-bar");
@@ -54,6 +56,7 @@ cardTitles.forEach(function (title) {
 
 
 
+
 buttonTutoria.onclick = function () {
   if (contentContainerTutoria.innerHTML !== "") {
     contentContainerTutoria.innerHTML = "";
@@ -63,20 +66,43 @@ buttonTutoria.onclick = function () {
   const cardElement = document.createElement("div");
   cardElement.classList.add("card", "tutoriaOnline")
 
-  contentContainerTutoria.innerHTML = `<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
+  //   contentContainerTutoria.innerHTML = `<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
 
-<div class="card-body">
-  <h5 class="card-title card-h5">Apuntes</h5>
-  <p class="card-text">En la seccion apuntes podras encontrar un ejemplo de como recibiras tu material de estudio y coplementario que podra ayudarte duraten tu periodo de preparacion. Haz click en el boton de descarga para poder ver un ejemplo! .</p>
-</div>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Apuntes Fisica <a><i class="bi bi-download"></i></a> </li>
-  <li class="list-group-item">Apuntes Analisis Matematico <a><i class="bi bi-download"></i></a></li>
-  <li class="list-group-item">Apuntes Quimica <a><i class="bi bi-download"></i></a></li>
-</ul>
+  // <div class="card-body">
+  //   <h5 class="card-title card-h5">Apuntes</h5>
+  //   <p class="card-text">En la seccion apuntes podras encontrar un ejemplo de como recibiras tu material de estudio y coplementario que podra ayudarte duraten tu periodo de preparacion. Haz click en el boton de descarga para poder ver un ejemplo!</p>
+  // </div>
+  // <ul class="list-group list-group-flush">
+  //   <li class="list-group-item">Apuntes Fisica <a><i class="bi bi-download"></i></a> </li>
+  //   <li class="list-group-item">Apuntes Analisis Matematico <a><i class="bi bi-download"></i></a></li>
+  //   <li class="list-group-item">Apuntes Quimica <a><i class="bi bi-download"></i></a></li>
+  // </ul>
 
-<button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
-</div>`;
+  // <button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
+  // </div>`;
+  Swal.fire({
+
+    title: '<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">',
+
+
+    html:
+      ' <div class="card-body"> ' +
+      '<h5 class="card-title card-h5">Apuntes</h5>' +
+      '<p class="card-text">En la seccion apuntes podras encontrar un ejemplo de como recibiras tu material de estudio y coplementario que podra ayudarte duraten tu periodo de preparacion. Haz click en el boton de descarga para poder ver un ejemplo!</p> ' +
+      '  </div> ' +
+      '<ul class="list-group list-group-flush"> ' +
+      '<li class="list-group-item">Apuntes Fisica <a><i class="bi bi-download"></i></a> </li>' +
+      '<li class="list-group-item">Apuntes Analisis Matematico <a><i class="bi bi-download"></i></a></li> ' +
+      '<li class="list-group-item">Apuntes Quimica <a><i class="bi bi-download"></i></a></li> ' +
+
+      '</ul>' +
+      '</div>',
+      confirmButtonText:
+      '<i class="bi bi-x-lg"></i>',
+    cancelButtonText:
+      '<i class="bi bi-x-lg"></i>',
+    cancelButtonAriaLabel: 'bi bi-cross'
+  })
 
   let buttonClose = getElementsByTagName("button");
   buttonClose.onclick = function () {
@@ -95,16 +121,35 @@ buttonApuntes.onclick = function () {
   const cardElement = document.createElement("div");
   cardElement.classList.add("card", "apuntesOnline", "close")
 
-  contentContainerApuntes.innerHTML = ` <div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
-  
-  <div class="card-body">
-    <h5 class="card-title card-h5">Tutoria</h5>
-    <p class="card-text">Nuestra tutoría te capacita para rendir exámenes con confianza. Te acompañamos en tu proceso de aprendizaje, brindándote apoyo y orientación personalizada. ¡Alcanza tu máximo potencial académico con nosotros!
-    .</p>
-  </div>
- 
-  <button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
-</div>`
+
+  //   contentContainerApuntes.innerHTML = ` <div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
+
+  //   <div class="card-body">
+  //     <h5 class="card-title card-h5"></h5>
+  //     <p class="card-text">
+  //     .</p>
+  //   </div>
+
+  //   <button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
+  // </div>`
+  Swal.fire({
+
+    title: '<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">',
+
+
+    html:
+      ' <div class="card-body"> ' +
+      '<h5 class="card-title card-h5">Tutoria</h5>' +
+      '<p class="card-text">Nuestra tutoría te capacita para rendir exámenes con confianza. Te acompañamos en tu proceso de aprendizaje, brindándote apoyo y orientación personalizada. ¡Alcanza tu máximo potencial académico con nosotros!</p> ' +
+      '  </div> ',
+
+      confirmButtonText:
+      '<i class="bi bi-x-lg"></i>',
+    cancelButtonText:
+      '<i class="bi bi-x-lg"></i>',
+    cancelButtonAriaLabel: 'bi bi-cross'
+  })
+
 
   let buttonClose = getElementsByTagName("button");
   buttonClose.onclick = function () {
@@ -120,22 +165,44 @@ buttonClasses.onclick = function () {
   const cardElement = document.createElement("div");
   cardElement.classList.add("card", "classOnline", "close");
 
-  contentContainer.innerHTML = `
-    <div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
-     
-      <div class="card-body">
-        <h5 class="card-title card-h5">Clases Online</h5>
-        <p class="card-text">Sumérgete en nuestra modalidad online y disfruta de clases de matemática, física, química y más. Amplía tus conocimientos desde cualquier lugar, con instructores expertos</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Fisica</li>
-        <li class="list-group-item">Analisis Matematico</li>
-        <li class="list-group-item">Quimica</li>
-      </ul>
-      <button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
-    </div>
-  `;
+  // contentContainer.innerHTML = `
+  //   <div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
 
+  //     <div class="card-body">
+  //       <h5 class="card-title card-h5">Clases Online</h5>
+  //       <p class="card-text">Sumérgete en nuestra modalidad online y disfruta de clases de matemática, física, química y más. Amplía tus conocimientos desde cualquier lugar, con instructores expertos</p>
+  //     </div>
+  //     <ul class="list-group list-group-flush">
+  //       <li class="list-group-item">Fisica</li>
+  //       <li class="list-group-item">Analisis Matematico</li>
+  //       <li class="list-group-item">Quimica</li>
+  //     </ul>
+  //     <button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
+  //   </div>
+  // `;
+  Swal.fire({
+
+    title: '<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">',
+
+
+    html:
+      ' <div class="card-body"> ' +
+      '<h5 class="card-title card-h5">Clases Online</h5>' +
+      '<p class="card-text">Sumérgete en nuestra modalidad online y disfruta de clases de matemática, física, química y más. Amplía tus conocimientos desde cualquier lugar, con instructores expertos</p>, ' +
+      '  </div> ' +
+      '<ul class="list-group list-group-flush"> ' +
+      '<li class="list-group-item">Fisica</li> ' +
+      '<li class="list-group-item">Fisica</li> ' +
+      '<li class="list-group-item">Quimica</li> ' +
+      '<li class="list-group-item">Matematica</li> ' +
+      '</ul>' +
+      '</div>',
+      confirmButtonText:
+      '<i class="bi bi-x-lg"></i>',
+    cancelButtonText:
+      '<i class="bi bi-x-lg"></i>',
+    cancelButtonAriaLabel: 'bi bi-cross'
+  })
 
 
   let buttonClose = document.getElementById("closeFiles");
@@ -144,4 +211,22 @@ buttonClasses.onclick = function () {
   };
 };
 
+
+// Swal.fire({
+//   title: '<strong>HTML <u>example</u></strong>',
+//   icon: 'info',
+//   html:
+//     'You can use <b>bold text</b>, ' +
+//     '<a href="//sweetalert2.github.io">links</a> ' +
+//     'and other HTML tags',
+//   showCloseButton: true,
+//   showCancelButton: true,
+//   focusConfirm: false,
+//   confirmButtonText:
+//     '<i class="fa fa-thumbs-up"></i> Great!',
+//   confirmButtonAriaLabel: 'Thumbs up, great!',
+//   cancelButtonText:
+//     '<i class="fa fa-thumbs-down"></i>',
+//   cancelButtonAriaLabel: 'Thumbs down'
+// })
 
