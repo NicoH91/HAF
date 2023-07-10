@@ -97,7 +97,7 @@ buttonTutoria.onclick = function () {
 
       '</ul>' +
       '</div>',
-      confirmButtonText:
+    confirmButtonText:
       '<i class="bi bi-x-lg"></i>',
     cancelButtonText:
       '<i class="bi bi-x-lg"></i>',
@@ -143,7 +143,7 @@ buttonApuntes.onclick = function () {
       '<p class="card-text">Nuestra tutoría te capacita para rendir exámenes con confianza. Te acompañamos en tu proceso de aprendizaje, brindándote apoyo y orientación personalizada. ¡Alcanza tu máximo potencial académico con nosotros!</p> ' +
       '  </div> ',
 
-      confirmButtonText:
+    confirmButtonText:
       '<i class="bi bi-x-lg"></i>',
     cancelButtonText:
       '<i class="bi bi-x-lg"></i>',
@@ -197,7 +197,7 @@ buttonClasses.onclick = function () {
       '<li class="list-group-item">Matematica</li> ' +
       '</ul>' +
       '</div>',
-      confirmButtonText:
+    confirmButtonText:
       '<i class="bi bi-x-lg"></i>',
     cancelButtonText:
       '<i class="bi bi-x-lg"></i>',
@@ -211,22 +211,4 @@ buttonClasses.onclick = function () {
   };
 };
 
-
-// Swal.fire({
-//   title: '<strong>HTML <u>example</u></strong>',
-//   icon: 'info',
-//   html:
-//     'You can use <b>bold text</b>, ' +
-//     '<a href="//sweetalert2.github.io">links</a> ' +
-//     'and other HTML tags',
-//   showCloseButton: true,
-//   showCancelButton: true,
-//   focusConfirm: false,
-//   confirmButtonText:
-//     '<i class="fa fa-thumbs-up"></i> Great!',
-//   confirmButtonAriaLabel: 'Thumbs up, great!',
-//   cancelButtonText:
-//     '<i class="fa fa-thumbs-down"></i>',
-//   cancelButtonAriaLabel: 'Thumbs down'
-// })
 
