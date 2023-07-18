@@ -520,6 +520,12 @@ tarjetas popup */
     border-radius: 10px;
 }
 
+@media (min-width:570px){
+    .services{
+        flex-direction: row;
+    }
+}
+
 
 /* @keyframes popUpAnimation {
     0% {

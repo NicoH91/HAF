@@ -40,14 +40,7 @@ function closeModal() {
   let modal = document.querySelector(".modalLogin");
   modal.style.display = "none";
 }
-// Cuando se clickea afuera del modal se cierra.
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
 
-// Agrega una clase común a todos los elementos h5
 cardTitles.forEach(function (title) {
   title.classList.add('card-h5');
 });
@@ -60,26 +53,13 @@ cardTitles.forEach(function (title) {
 buttonTutoria.onclick = function () {
   if (contentContainerTutoria.innerHTML !== "") {
     contentContainerTutoria.innerHTML = "";
-    return;//si hay contenido dentro del div
+    return;
   }
 
   const cardElement = document.createElement("div");
   cardElement.classList.add("card", "tutoriaOnline")
 
-  //   contentContainerTutoria.innerHTML = `<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">
 
-  // <div class="card-body">
-  //   <h5 class="card-title card-h5">Apuntes</h5>
-  //   <p class="card-text">En la seccion apuntes podras encontrar un ejemplo de como recibiras tu material de estudio y coplementario que podra ayudarte duraten tu periodo de preparacion. Haz click en el boton de descarga para poder ver un ejemplo!</p>
-  // </div>
-  // <ul class="list-group list-group-flush">
-  //   <li class="list-group-item">Apuntes Fisica <a><i class="bi bi-download"></i></a> </li>
-  //   <li class="list-group-item">Apuntes Analisis Matematico <a><i class="bi bi-download"></i></a></li>
-  //   <li class="list-group-item">Apuntes Quimica <a><i class="bi bi-download"></i></a></li>
-  // </ul>
-
-  // <button class="close" id="closeFiles"><i class="bi bi-x-lg"></i></button>
-  // </div>`;
   Swal.fire({
 
     title: '<div class="card classOnline zoom-in " style="width: 20rem;" id="myCard">',
@@ -188,10 +168,10 @@ buttonClasses.onclick = function () {
     html:
       ' <div class="card-body"> ' +
       '<h5 class="card-title card-h5">Clases Online</h5>' +
-      '<p class="card-text">Sumérgete en nuestra modalidad online y disfruta de clases de matemática, física, química y más. Amplía tus conocimientos desde cualquier lugar, con instructores expertos</p>, ' +
+      '<p class="card-text">Sumérgete en nuestra modalidad online y disfruta de clases de matemática, física, química y más. Amplía tus conocimientos desde cualquier lugar, con instructores expertos</p> ' +
       '  </div> ' +
       '<ul class="list-group list-group-flush"> ' +
-      '<li class="list-group-item">Fisica</li> ' +
+
       '<li class="list-group-item">Fisica</li> ' +
       '<li class="list-group-item">Quimica</li> ' +
       '<li class="list-group-item">Matematica</li> ' +
@@ -210,5 +190,6 @@ buttonClasses.onclick = function () {
     contentContainer.innerHTML = ""; // Cerrar la tarjeta al hacer clic en el botón de cierre
   };
 };
+
 
 

@@ -1,3 +1,8 @@
+
+
+
+
+
 let informacion = document.getElementById("informacion");
 
 
