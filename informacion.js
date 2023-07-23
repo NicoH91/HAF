@@ -20,38 +20,9 @@ informacion.addEventListener("click", function () {
 
 
 //Filename: script.js
-let rev = 0;
-carousel(rev);
-
-function previousReview() {
-    rev = rev - 1;
-    carousel(rev);
-}
-
-function nextReview() {
-    rev = rev + 1;
-    carousel(rev);
-}
 
 
-function carousel(review) {
-    let reviews = document.getElementsByClassName("review__items");
-    review = review >= reviews.length ? 0 : review;
-    rev = review >= reviews.length ? 0 : rev;
 
-    review = review < 0 ? reviews.length - 1 : review;
-    rev = review < 0 ? reviews.length - 1 : rev;
-
-    for (let i = 0; i < reviews.length; i++) {
-        reviews[i].style.display = "none";
-    }
-    reviews[review].style.display = "block";
-
-    for (let i = 0; i < reviews.length; i++) {
-        reviews[i].classList.remove("active");
-    }
-    reviews[review].classList.add("active");
-}
 
 // Crear un objeto JSON con los datos de inicio de sesión para el formu
 //Se agrega un login  con json para incluir los temas vistos. 

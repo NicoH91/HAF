@@ -7,7 +7,7 @@ document.getElementById('sendButton').addEventListener('click', function (event)
 
     // Verificar si los campos están vacíos
     if (name.trim() === '' || lastName.trim() === '' || message.trim() === '') {
-        // Activar SweetAlert para mostrar mensaje de error
+        
         Swal.fire({
             title: 'Error',
             text: 'Por favor, completa todos los campos del formulario.',

@@ -17,6 +17,7 @@ body {
 
 }
 
+
 /* h1 {
     text-align: center;
     padding: 20px;
@@ -223,26 +224,21 @@ span.psw {
 /* The Modal (background) */
 .modalLogin {
     display: none;
-    /* Hidden by default */
 
-    /* Stay in place */
     z-index: 8;
-    /* Sit on top */
+
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
+
     height: 100%;
-    /* Full height */
-    /* overflow: auto; */
-    /* Enable scroll if needed */
+
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
+
     background-color: rgba(0, 0, 0, 0.837);
 
-    /* Black w/ opacity */
-    /* padding-top: 30px; */
+
 
 }
 
@@ -250,10 +246,10 @@ span.psw {
 .modalContent {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
-    /* 5% from the top, 15% from the bottom and centered */
+
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
+
 }
 
 
@@ -325,7 +321,7 @@ span.psw {
     margin-bottom: 2rem;
     overflow: hidden;
     background-size: cover;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.65) 100%), url(qijin-xu.png) no-repeat center center scroll;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.65) 100%), url(qijin-xu.png) no-repeat center center scroll; */
 }
 
 .title-h1 {
@@ -520,8 +516,8 @@ tarjetas popup */
     border-radius: 10px;
 }
 
-@media (min-width:570px){
-    .services{
+@media (min-width:570px) {
+    .services {
         flex-direction: row;
     }
 }
@@ -605,89 +601,184 @@ tarjetas popup */
 
 }
 
+.title__h2--about {
+    margin-top: 3rem;
+    padding: 10px 0px;
+    width: 100%;
+    font-size: 3rem;
+    text-decoration: underline rgb(80, 203, 255);
+    text-align: center;
 
-.about {
+}
+
+.about-left {
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #49b9d29c 0%, #d1cbd4 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff
+}
+
+.about-left-content>div {
+    background: #12192c;
+    padding: 4rem 4rem 2.5rem 5rem;
+    text-align: center;
+
+    border-radius: 12px 12px 0 0;
+}
+
+.about-left-content {
+    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    border-radius: 12px;
+    width: 80%;
+}
+
+.about-img img {
+    display: block;
+    width: 200px;
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.shadow {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.about-left-content h2 {
+    font-size: 2rem;
+    margin: 2.2rem 0 0.6rem 0;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid lightblue;
+}
+
+.about-left-content h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 1.2rem;
+}
+
+.icons {
+    background: #12192c;
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 0 auto;
-    background-color: rgba(249, 250, 250, 0.362);
+    padding: 0.8rem 0;
+    border-radius: 0 0 12px 12px;
 }
 
-.about img {
-    height: auto;
-    width: 420px;
-
-}
-
-.about-text {
-    width: 550px;
-}
-
-.main {
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
+.icons li {
+    list-style-type: none;
+    background: #2136ffb5;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
-.about-text h2 {
-    color: black;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+.icons li:hover {
+    background: #edffec;
+    color: #000;
 }
 
-.about-text h5 {
-    color: black;
-    font-size: 25px;
-    text-transform: capitalize;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
+.about-right {
+    background: lightblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+    text-align: center;
+    color: black
 }
 
-.about-text p {
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 15px;
-    margin-bottom: 45px;
+
+
+.about-btns {
+    display: flex;
+    margin: 2rem 0;
 }
 
-.about-btn {
-    font-size: 1.5rem;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
+.btn {
+    border: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #fff;
     border-radius: 20px;
-    transition: .4s;
-    background-color: lightskyblue;
-
+    padding: 0.55rem 0;
+    width: 130px;
+    font-weight: 600;
+    background: transparent;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: #fff
 }
 
-.review {
-    background: rgb(63, 200, 246);
-    height: auto;
-    width: 300px;
-    border-radius: 15px;
-    margin: auto;
-    padding: 10px;
-    margin-top: 30px;
-    box-shadow: 5px 5px 5px #0d0d0d;
-    align-items: center;
-    align-content: center;
+.btn.btn-link {
+    background: #2136ffb5;
+    color: #fff;
+    border-color: white;
+    transition: all 0.5s ease-in-out;
 }
 
-.review__items {
-    align-items: center;
-    justify-content: space-evenly;
-    width: 250px;
-    padding: 10px;
-    align-items: center;
+.btn.btn-link:hover {
+    background: transparent;
+    border-color: #fff;
+    color: #000000;
 }
+
+.about-para p {
+    font-weight: 500;
+    padding: 0.5rem;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 992px) {
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .about-left {
+        position: relative;
+    }
+
+    .about-left-content {
+        position: absolute;
+        width: 80%;
+
+
+    }
+}
+
+
+
+
 
 /* ########### testimonial part  ###########*/
 .container__testimonial {
